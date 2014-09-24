@@ -57,7 +57,7 @@ class AccountController extends Controller
 	 */
 	public function actionCreate()
 	{
-	  if (Account::model()->count() > 1) {
+	  if (Account::model()->count() >= 1) {
       Yii::app()->user->setFlash('upgrade','The free version of Birdcage is limited to one account. <a href="http://jeffreifman.com/birdhouse">Upgrade to Birdhouse</a>.');
 			$this->redirect(array('admin'));	    
 	  } 
